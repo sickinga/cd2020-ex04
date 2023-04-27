@@ -48,5 +48,5 @@ jobs:
       - name: Build
         run: go build -v ./...
 
-      - name: Test
-        run: go test -v ./...
+      - name: Go Test Action
+        uses: robherley/go-test-action@v0.1.0
