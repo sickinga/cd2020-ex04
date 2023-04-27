@@ -11,6 +11,7 @@ RUN apk update && \
     apk add build-base 
 RUN ls
 RUN go build -o /usr/myapp
+RUN go test -v ./...
 
 EXPOSE 8888
 
