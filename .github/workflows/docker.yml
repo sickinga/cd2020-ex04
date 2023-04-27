@@ -7,7 +7,7 @@ on:
 
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-  DOCKER_PASSWORD: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
   IMAGE_NAME: sickinga/cd2020-ex04
 
 jobs:
