@@ -1,18 +1,17 @@
 FROM golang:1.11-alpine
 
-# Set maintainer label: maintainer=[YOUR-EMAIL]
+LABEL maintainer='s2210455004@fhooe.at'
 
+WORKDIR /src
 
-# Set working directory: `/src`
+COPY *.go go.* ./
 
+RUN apk update && \
+    apk add git && \
+    apk add build-base 
+RUN ls
+RUN go build -o /usr/myapp
 
-# Copy local file `main.go` to the working directory
+EXPOSE 8888
 
-
-# List items in the working directory (ls)
-
-# Build the GO app as myapp binary and move it to /usr/
-
-#Expose port 8888
-
-# Run the service myapp when a container of this image is launched
+CMD ["/usr/myapp"]
