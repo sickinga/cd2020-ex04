@@ -29,3 +29,6 @@ jobs:
           context: .
           push: true
           tags: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+      - name: Run tests
+        run: go test -v ./...
